@@ -1,0 +1,76 @@
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.matchList {
+    list-style: none;
+    padding: 0;
+}
+
+.matchItem {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.itemDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lostItem,
+.foundItem {
+    margin-bottom: 20px;
+}
+
+.itemImages {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.itemImages img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.messageButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.messageButton:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 600px) {
+    .itemDetails {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .lostItem,
+    .foundItem {
+        flex: 1;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 599px) {
+    .itemImages img {
+        width: 100%;
+    }
+}

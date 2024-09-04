@@ -1,0 +1,52 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background: transparent;
+    padding: 10px 0;
+    gap: 15px;
+}
+
+.navItem {
+    color: white;
+    /* İkonların rengi */
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navItem:hover {
+    color: #f0a500;
+    /* Üzerine gelince ikonların rengi değişir */
+}
+
+.navItem::after {
+    content: attr(title);
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navItem:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Mobil Ekran İçin Düzenlemeler */
+@media (max-width: 600px) {
+    .navbar {
+        justify-content: space-evenly;
+        /* Butonlar arasındaki boşluğu dengeler */
+        gap: 10px;
+        /* Mobilde butonlar arasındaki boşlukları daraltır */
+    }
+
+    .navItem {
+        font-size: 1.2rem;
+        /* Mobil cihazlarda ikonların boyutunu biraz küçültür */
+    }
+}

@@ -1,0 +1,41 @@
+.header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    /* Metni sola hizalamak için */
+    display: flex;
+    justify-content: space-between;
+    /* Header içeriğini iki uca yaymak için */
+    align-items: center;
+    /* Yatayda ortalamak için */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: rotate(-2deg);
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        /* Logo ve navbar'ı dikey hizalar */
+    }
+
+    .navbar {
+        margin-top: 10px;
+        /* Logo ve navbar arasına boşluk ekler */
+    }
+}

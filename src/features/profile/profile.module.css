@@ -1,0 +1,25 @@
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.logoutButton {
+    background-color: #f44336;
+    /* Kırmızı */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.logoutButton:hover {
+    background-color: #d32f2f;
+    /* Daha koyu kırmızı */
+}

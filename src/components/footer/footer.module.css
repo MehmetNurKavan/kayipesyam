@@ -1,0 +1,27 @@
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: auto;
+    height: 40px;
+    margin-right: 20px;
+    /* Logo ile yazı arasına boşluk ekler */
+}
+
+p {
+    margin: 0;
+    /* Paragrafın çevresindeki varsayılan boşluğu kaldırır */
+}

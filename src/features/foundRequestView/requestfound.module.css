@@ -1,0 +1,54 @@
+.requestView {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.itemDetails {
+    text-align: left;
+}
+
+.itemDetails h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.itemImage {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.itemDetails p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.itemDetails p strong {
+    color: #333;
+}
+
+.messageButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.messageButton:hover {
+    background-color: #0056b3;
+}

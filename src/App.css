@@ -1,0 +1,20 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  /*transition: margin-left 0.3s ease;*/
+  flex-direction: column;
+}
+
+.mainContentBody {
+  flex: 1;
+}
+
+.mainContent.shifted {
+  margin-left: 250px;
+}

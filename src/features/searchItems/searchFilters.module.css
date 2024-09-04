@@ -1,0 +1,166 @@
+.searchFilters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.input {
+    width: 100%;
+}
+
+.compactDateRange {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+}
+
+.compactDateRange input {
+    width: 100%;
+}
+
+.compactSearchType {
+    display: flex;
+    flex-direction: row;
+    /* Yatay hizalama */
+    align-items: end;
+    /* Dikey ortalama */
+    gap: 10px;
+    /* Elemanlar arasındaki boşluk */
+}
+
+.compactSearchType .label {
+    flex: 1;
+    /* Label ve input'un yanında yeterli boşluk bırakmak için */
+    display: flex;
+    flex-direction: column;
+}
+
+.compactSearchType .input {
+    width: 150px;
+    /* Input genişliği */
+}
+
+.compactSearchType button {
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.sear .actionButtons {
+    display: flex;
+    gap: 10px;
+    align-items: end;
+}
+
+.searchButton,
+.resetButton {
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.searchButton {
+    background-color: #007bff;
+    color: white;
+}
+
+.searchButton:hover {
+    background-color: #0056b3;
+}
+
+.resetButton {
+    background-color: #6c757d;
+    color: white;
+}
+
+.resetButton:hover {
+    background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+    .searchFilters {
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .label {
+        flex: 1;
+    }
+
+    .compactDateRange {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .compactSearchType {
+        display: flex;
+        flex-direction: row;
+        /* Yatayda hizalamak için */
+        align-items: end;
+        /* Dikeyde ortalamak için */
+        gap: 10px;
+        /* Elemanlar arasındaki boşluk */
+    }
+
+    .compactSearchType .label {
+        flex: 1;
+        /* Label ve input'un yanında yeterli boşluk bırakmak için */
+        display: flex;
+        flex-direction: row;
+    }
+
+    .compactSearchType .input {
+        width: 100%;
+        /* Input genişliği ayarı */
+    }
+
+    .compactSearchType button {
+        padding: 5px 10px;
+        font-size: 12px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+    }
+
+    .compactSearchType .searchButton {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .compactSearchType .searchButton:hover {
+        background-color: #0056b3;
+    }
+
+    .compactSearchType .resetButton {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    .compactSearchType .resetButton:hover {
+        background-color: #5a6268;
+    }
+
+}

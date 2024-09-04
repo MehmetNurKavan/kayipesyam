@@ -1,0 +1,96 @@
+.form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form input,
+.form select,
+.form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+.form input[type="file"] {
+    padding: 5px;
+}
+
+.form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form button:hover {
+    background-color: #45a049;
+}
+
+.form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.loading {
+    text-align: center;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.success {
+    text-align: center;
+    color: green;
+    margin-bottom: 10px;
+}
+
+/* Fotoğraf ve öğe detaylarının yer aldığı bölüm */
+.itemDetails {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.itemDetails img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.itemDetails div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.itemDetails p {
+    margin: 0;
+    color: #333;
+}
+
+.itemDetails p strong {
+    color: #000;
+}
