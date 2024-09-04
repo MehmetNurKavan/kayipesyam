@@ -132,6 +132,14 @@ const LostItemsPage: React.FC = () => {
         }
     };
 
+    const handleRequestClick = (item: { id: string }) => {
+        navigate(`/lost-items/${item.id}`, {
+            state: {
+                id: item.id
+            },
+        });
+    };
+
     const handleRemoveItem = async (id: string, photoUrl: string, barcodePhotoUrl?: string) => {
         try {
             await removeLostItem(id, photoUrl, barcodePhotoUrl);
@@ -298,13 +306,21 @@ const LostItemsPage: React.FC = () => {
                             <p>Kaybedilen Yer: {item.lostLocation}</p>
                             <p>Kişisel Konum: {item.personalLocation}</p>
                             <p>Paylaşan: {item.postedBy}</p>
+                            <div className={styles['item-images']}>
+                                <img src={item.photoUrl} alt={item.name} />
+                                {item.barcodePhotoUrl && <img src={item.barcodePhotoUrl} alt="Barkod" />}
+                            </div>
                         </div>
-                        <div className={styles['item-images']}>
-                            <img src={item.photoUrl} alt={item.name} />
-                            {item.barcodePhotoUrl && <img src={item.barcodePhotoUrl} alt="Barkod" />}
+                        <div className={styles['buttons-container']}>
+                            {item.id ? (
+                                <button onClick={() => handleRequestClick({ id: item.id! })}>Başvuruları<br />Görüntüle</button>
+                            ) : (
+                                <p></p>
+                            )}
+                            <button onClick={() => item.id && handleRemoveItem(item.id, item.photoUrl, item.barcodePhotoUrl)}>Sil</button>
                         </div>
-                        <button onClick={() => item.id && handleRemoveItem(item.id, item.photoUrl, item.barcodePhotoUrl)}>Sil</button>
                     </li>
+
                 ))}
             </ul>
         </div>

@@ -69,6 +69,11 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically by default */
+    align-items: flex-start;
+    /* Align items to start */
 }
 
 li h2 {
@@ -97,26 +102,14 @@ li button:hover {
     background-color: #c82333;
 }
 
-@media (min-width: 601px) {
-    li {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .item-details {
-        flex: 1;
-    }
-
-    .item-images {
-        display: flex;
-        gap: 10px;
-    }
-
-    .item-images img {
-        max-width: 150px;
-    }
+li .buttons-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack buttons vertically */
+    gap: 10px;
+    /* Space between buttons */
+    margin-top: 10px;
+    /* Space above buttons */
 }
 
 @media (max-width: 600px) {
@@ -126,8 +119,24 @@ li button:hover {
         align-items: center;
     }
 
+    .item-details {
+        flex: 1;
+    }
+
     .item-images img {
         max-width: 100%;
         margin-bottom: 10px;
+    }
+
+    .item-images {
+        display: flex;
+        gap: 10px;
+    }
+
+    li .buttons-container {
+        flex-direction: row;
+        /* Stack buttons horizontally */
+        align-items: center;
+        /* Align items to center */
     }
 }

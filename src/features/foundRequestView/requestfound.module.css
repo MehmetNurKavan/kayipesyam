@@ -1,54 +1,155 @@
-.requestView {
-    padding: 20px;
+/* lostItems.module.css */
+
+.container {
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
     background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.itemDetails {
-    text-align: left;
-}
-
-.itemDetails h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+h1 {
+    text-align: center;
     color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
 }
 
-.itemImage {
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="file"],
+button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"],
+input[type="file"] {
     width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.itemDetails p {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #555;
-}
-
-.itemDetails p strong {
-    color: #333;
-}
-
-.messageButton {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #007bff;
+button {
+    background-color: #007BFF;
+    color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    text-decoration: none;
-    text-align: center;
 }
 
-.messageButton:hover {
+button:hover {
     background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically by default */
+    align-items: flex-start;
+    /* Align items to start */
+}
+
+li h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+li p {
+    margin: 5px 0;
+    color: #666;
+}
+
+li button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li button:hover {
+    background-color: #c82333;
+}
+
+li .buttons-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack buttons vertically */
+    gap: 10px;
+    /* Space between buttons */
+    margin-top: 10px;
+    /* Space above buttons */
+}
+
+@media (min-width: 601px) {
+    li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .item-details {
+        flex: 1;
+    }
+
+    .item-images {
+        display: flex;
+        gap: 10px;
+    }
+
+    .item-images img {
+        max-width: 150px;
+    }
+
+    li .buttons-container {
+        flex-direction: column;
+        /* Stack buttons horizontally */
+        align-items: center;
+        /* Align items to center */
+    }
+}
+
+@media (max-width: 600px) {
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-images img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
 }

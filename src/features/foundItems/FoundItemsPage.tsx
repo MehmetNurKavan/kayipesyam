@@ -307,15 +307,20 @@ const FoundItemsPage: React.FC = () => {
                             <p>İlçe: {item.district}</p>
                             <p>Bulunan Yer: {item.foundLocation}</p>
                             <p>Mevcut Konum: {item.currentLocation}</p>
-                            {item.photoUrl && <img src={item.photoUrl} alt="Eşya Fotoğrafı" />}
-                            {item.barcodePhotoUrl && <img src={item.barcodePhotoUrl} alt="Barkod Fotoğrafı" />}
+                            <div className={styles['item-images']}>
+                                {item.photoUrl && <img src={item.photoUrl} alt="Eşya Fotoğrafı" />}
+                                {item.barcodePhotoUrl && <img src={item.barcodePhotoUrl} alt="Barkod Fotoğrafı" />}
+                            </div>
                         </div>
-                        {item.id ? (
-                            <button onClick={() => handleRequestClick({ id: item.id! })}>Başvuruları Görüntüle</button>
-                        ) : (
-                            <p></p>
-                        )}
-                        <button onClick={() => item.id && handleRemoveItem(item.id, item.photoUrl, item.barcodePhotoUrl)}>Sil</button>                    </li>
+                        <div className={styles['buttons-container']}>
+                            {item.id ? (
+                                <button onClick={() => handleRequestClick({ id: item.id! })}>Başvuruları Görüntüle</button>
+                            ) : (
+                                <p></p>
+                            )}
+                            <button onClick={() => item.id && handleRemoveItem(item.id, item.photoUrl, item.barcodePhotoUrl)}>Sil</button>
+                        </div>
+                    </li>
                 ))}
             </ul>
         </div>

@@ -192,7 +192,7 @@ const RequestFormPage: React.FC = () => {
                 </select>
             </label>
             <label>
-                Kaybedilen Yer :
+                Kaybedilen/Bulunan Yer :
                 <input
                     type="text"
                     name="lostLocation"
@@ -260,7 +260,7 @@ const RequestFormPage: React.FC = () => {
                 />
             </label>
             <label>
-                Kaybedilen Tarih :
+                Kaybedilen/Bulunan Tarih :
                 <input
                     type="date"
                     name="date"

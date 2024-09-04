@@ -12,7 +12,8 @@ import AuthPage from './features/auth/AuthPage';
 import ProfilePage from './features/profile/ProfilePage';
 import SearchPage from './features/searchItems/SearchPage';
 import RequestFormPage from './features/request/RequestFormPage';
-import FoundRequestPage from './features/foundRequestView/FoundRequestView';
+import FoundRequestPage from './features/foundRequestView/FoundRequestPage';
+import LostRequestPage from './features/lostRequestview/LostRequestPage';
 
 const App: React.FC = () => {
 
@@ -25,6 +26,7 @@ const App: React.FC = () => {
           <Route path="/search-items" element={<SearchPage />} />
           <Route path="/matching" element={<MatchingPage />} />
           <Route path="/lost-items" element={<LostItemsPage />} />
+          <Route path="/lost-items/:id" element={<LostRequestPage />} />
           <Route path="/found-items" element={<FoundItemsPage />} />
           <Route path="/found-items/:id" element={<FoundRequestPage />} />
           <Route path="/messaging" element={<MessagingPage />} />

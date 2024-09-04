@@ -2,11 +2,11 @@ import type React from 'react';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from "react-router-dom";
 import { useAppDispatch } from '../../app/hooks';
-import styles from './requestfound.module.css';
+import styles from './requestlost.module.css';
 import { getAuth } from 'firebase/auth';
-import { getRequestItem } from '../foundRequestView/foundRequestAPI';
+import { getRequestItem } from './lostRequestAPI';
 
-const FoundRequestPage: React.FC = () => {
+const LostRequestPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const auth = getAuth();
@@ -65,10 +65,10 @@ const FoundRequestPage: React.FC = () => {
                         <p><strong>İsim:</strong> {item.name}</p>
                         <p><strong>Soyisim:</strong> {item.surname}</p>
                         <p><strong>Telefon:</strong> {item.phone}</p>
-                        <p><strong>Kaybedilen Yer:</strong> {item.lostLocation}</p>
+                        <p><strong>Bulunan Yer:</strong> {item.lostLocation}</p>
                         <p><strong>Kişisel Konum:</strong> {item.personalLocation}</p>
                         <p><strong>Eşya Türü:</strong> {item.itemType}</p>
-                        <p><strong>Kaybedilen Tarih:</strong> {item.date}</p>
+                        <p><strong>Bulunan Tarih:</strong> {item.date}</p>
                         <p><strong>Şehir:</strong> {item.city}</p>
                         <p><strong>İlçe:</strong> {item.district}</p>
                         <p><strong>Ek Yazı:</strong> {item.comment}</p>
@@ -88,4 +88,4 @@ const FoundRequestPage: React.FC = () => {
     );
 };
 
-export default FoundRequestPage;
+export default LostRequestPage;
