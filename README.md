@@ -1,4 +1,5 @@
 # Kayıp Eşyam
+![Proje Görseli](project_images/home.png)
 
 Kayıp Eşyam reposunu klonlamak için:
 
@@ -39,3 +40,18 @@ Kayıp Eşyam, kayıp ve bulunan eşyaların kolayca bildirilmesini, eşleştiri
 - İnsanları Yeniden Birleştirmek: İnsanların kaybettikleri eşyaları geri bulmalarını kolaylaştırmak.
 - Kullanıcı Dostu Arayüz: Her seviyedeki kullanıcıya hitap eden, basit ve sezgisel bir arayüz sağlamak.
 - Gerçek Zamanlı Etkileşim: Kayıp eşyaların bulunma şansını artırmak için kullanıcılar arasında gerçek zamanlı etkileşim sağlamak.
+
+## Proje Görselleri
+
+![Proje Görseli](project_images/search.png)
+![Proje Görseli](project_images/lost.png)
+![Proje Görseli](project_images/found.png)
+![Proje Görseli](project_images/request.png)
+![Proje Görseli](project_images/request2.png)
+![Proje Görseli](project_images/request_details.png)
+![Proje Görseli](project_images/chat.png)
+![Proje Görseli](project_images/recuest.png)
+![Proje Görseli](project_images/signin.png)
+![Proje Görseli](project_images/welcome.png)
+![Proje Görseli](project_images/signOut.png)
+
